@@ -1,21 +1,28 @@
 /**
-Problem: A sound digital communication scheme would involve encoding data before it is sent to the receiver. A simple class of encoding schemes utilized in digital 
-communications are the Hamming codes. The Hamming(7,4) code works as follows. A 4bit data sequence is sent along with 3 parity bits.
+Problem: A sound  digital communication scheme  would involve encoding data before
+it is sent to the receiver. A simple class of encoding schemes utilized in digital 
+communications  are the Hamming codes.  The Hamming(7,4) code works as  follows. A
+4bit data sequence is sent along with 3 parity bits.
 
 data =  d_1 d_2 d_3 d_4 P_1 P_2 P_3
 
-The parity bits P_k allow for perfect recovery of the original data, even if the data is corrupted in the channel during transmission. The Hamming(7,4) code is used in schemes
-where it is incredibly unlikely for two bits to be in error. Therefore, assume only one bit in the sequence is possibly in error. 
+The parity  bits P_k  allow for perfect  recovery of the original data, even if the
+data is corrupted in the channel during transmission. The Hamming(7,4) code is used
+in  schemes where it is incredibly  unlikely for two bits to be in error. Therefore,
+assume only one bit in the sequence is possibly in error. 
+
 The parity bits are generated before transmission of the data as follows: 
 
 P_1 = d_1 XOR d_2 XOR d_4
 P_2 = d_1 XOR d_3 XOR d_4
 P_3 = d_2 XOR d_3 XOR d_4
 
-Given a set of 7 incoming bits, generate a function which checks if the data is corrupted, and if the data is in fact corrupted, fix the data.
+Given a set of 7 incoming bits, generate a function which checks if the data is corrupted,
+and if the data is in fact corrupted, fix the data.
+
 Note that one or more of the parity bits could be corrupted.
 
-Sample received data:       1101001.
+Sample received data:    1101001
 Sample corrected output: 1001001 
 */
 
